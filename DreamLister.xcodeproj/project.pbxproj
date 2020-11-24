@@ -59,15 +59,39 @@
 			isa = PBXGroup;
 			children = (
 				D759ADA3256D9BA000A861D7 /* AppDelegate.swift */,
+				D759ADBD256DA0AE00A861D7 /* Model */,
+				D759ADBC256DA0A800A861D7 /* View */,
+				D759ADBB256DA09B00A861D7 /* Controller */,
 				D759ADA5256D9BA000A861D7 /* SceneDelegate.swift */,
-				D759ADA7256D9BA000A861D7 /* ViewController.swift */,
-				D759ADA9256D9BA000A861D7 /* Main.storyboard */,
 				D759ADAF256D9BA100A861D7 /* Assets.xcassets */,
 				D759ADB1256D9BA100A861D7 /* LaunchScreen.storyboard */,
 				D759ADB4256D9BA100A861D7 /* Info.plist */,
 				D759ADAC256D9BA000A861D7 /* DreamLister.xcdatamodeld */,
 			);
 			path = DreamLister;
+			sourceTree = "<group>";
+		};
+		D759ADBB256DA09B00A861D7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D759ADA7256D9BA000A861D7 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D759ADBC256DA0A800A861D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D759ADA9256D9BA000A861D7 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D759ADBD256DA0AE00A861D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
