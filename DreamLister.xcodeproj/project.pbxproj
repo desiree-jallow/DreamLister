@@ -23,6 +23,8 @@
 		D759ADCC256DA16A00A861D7 /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D759ADC4256DA16A00A861D7 /* Item+CoreDataClass.swift */; };
 		D759ADCD256DA16A00A861D7 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D759ADC5256DA16A00A861D7 /* Item+CoreDataProperties.swift */; };
 		D759ADD3256DAA8800A861D7 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D759ADD2256DAA8800A861D7 /* MaterialView.swift */; };
+		D759ADD6256EDF4800A861D7 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D759ADD5256EDF4800A861D7 /* ItemCell.swift */; };
+		D759ADDA256EE29B00A861D7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D759ADD9256EE29B00A861D7 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		D759ADC4256DA16A00A861D7 /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D759ADC5256DA16A00A861D7 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D759ADD2256DAA8800A861D7 /* MaterialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		D759ADD5256EDF4800A861D7 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		D759ADD9256EE29B00A861D7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +85,11 @@
 			isa = PBXGroup;
 			children = (
 				D759ADA3256D9BA000A861D7 /* AppDelegate.swift */,
+				D759ADA5256D9BA000A861D7 /* SceneDelegate.swift */,
+				D759ADD8256EE28100A861D7 /* Utilities */,
 				D759ADBD256DA0AE00A861D7 /* Model */,
 				D759ADBC256DA0A800A861D7 /* View */,
 				D759ADBB256DA09B00A861D7 /* Controller */,
-				D759ADA5256D9BA000A861D7 /* SceneDelegate.swift */,
 				D759ADAF256D9BA100A861D7 /* Assets.xcassets */,
 				D759ADB1256D9BA100A861D7 /* LaunchScreen.storyboard */,
 				D759ADB4256D9BA100A861D7 /* Info.plist */,
@@ -106,6 +111,7 @@
 			children = (
 				D759ADA9256D9BA000A861D7 /* Main.storyboard */,
 				D759ADD2256DAA8800A861D7 /* MaterialView.swift */,
+				D759ADD5256EDF4800A861D7 /* ItemCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -119,6 +125,14 @@
 				D759ADC1256DA16A00A861D7 /* Image+CoreDataProperties.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D759ADD8256EE28100A861D7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D759ADD9256EE29B00A861D7 /* Constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +209,8 @@
 				D759ADA8256D9BA000A861D7 /* MainVC.swift in Sources */,
 				D759ADC8256DA16A00A861D7 /* Image+CoreDataClass.swift in Sources */,
 				D759ADD3256DAA8800A861D7 /* MaterialView.swift in Sources */,
+				D759ADD6256EDF4800A861D7 /* ItemCell.swift in Sources */,
+				D759ADDA256EE29B00A861D7 /* Constants.swift in Sources */,
 				D759ADC7256DA16A00A861D7 /* ItemType+CoreDataProperties.swift in Sources */,
 				D759ADCA256DA16A00A861D7 /* Store+CoreDataClass.swift in Sources */,
 				D759ADCC256DA16A00A861D7 /* Item+CoreDataClass.swift in Sources */,
