@@ -20,6 +20,7 @@ class MainVC: UIViewController {
 //        generateDummyData()
         attempFetch()
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constants.Segues.editItem {
             if let destination = segue.destination as? ItemDetailsVC {

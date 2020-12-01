@@ -14,6 +14,7 @@ class ItemCell: UITableViewCell {
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var details: UILabel!
     
+    
     func configCell(_ item: Item) {
         thumbnail.image = item.image?.image as? UIImage ?? UIImage(named: "imagePick")
         title.text = item.name

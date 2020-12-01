@@ -18,6 +18,7 @@ class ItemDetailsVC: UIViewController {
     
     var stores = [Store]()
     var itemToEdit: Item?
+    var imagePicker: UIImagePickerController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,9 @@ class ItemDetailsVC: UIViewController {
         // Do any additional setup after loading the view.
         storePicker.delegate = self
         storePicker.dataSource = self
+        
+        imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
         
 //        generateStores()
         getStores()
@@ -56,7 +60,7 @@ class ItemDetailsVC: UIViewController {
         if let details = itemDetails.text {
             item.details = details
         }
-
+        item.image = photo
         item.store = stores[storePicker.selectedRow(inComponent: 0)]
         Constants.appDelegate.saveContext()
         navigationController?.popViewController(animated: true)
@@ -75,7 +79,7 @@ class ItemDetailsVC: UIViewController {
         }
     }
     @IBAction func addImage(_ sender: UIButton) {
-        
+        present(imagePicker, animated: true, completion: nil)
     }
 }
 
@@ -150,5 +154,16 @@ extension ItemDetailsVC {
                 } while index < stores.count
             }
         }
+    }
+}
+
+//MARK: - UIImagePicker Delegate
+extension ItemDetailsVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[.originalImage] as? UIImage {
+            itemThumb.image = image
+        }
+        
+        picker.dismiss(animated: true, completion: nil)
     }
 }
