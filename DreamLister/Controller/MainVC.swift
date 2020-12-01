@@ -20,7 +20,15 @@ class MainVC: UIViewController {
 //        generateDummyData()
         attempFetch()
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Constants.Segues.editItem {
+            if let destination = segue.destination as? ItemDetailsVC {
+                if let item = sender as? Item {
+                    destination.itemToEdit = item
+                }
+            }
+        }
+    }
 }
 
 extension MainVC {
@@ -64,7 +72,16 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         let item = controller.object(at: indexPath)
         cell.configCell(item)
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let objects = controller.fetchedObjects, objects.count > 0 {
+            let item = objects[indexPath.row]
+            performSegue(withIdentifier: Constants.Segues.editItem, sender: item)
+        }
+    }
 }
+
+
 
 //MARK: - Core Data Setup
 extension MainVC: NSFetchedResultsControllerDelegate {
@@ -116,6 +133,37 @@ extension MainVC: NSFetchedResultsControllerDelegate {
         } catch {
             print(error.localizedDescription)
         }
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch type {
+        case .insert:
+            if let indexPath = newIndexPath {
+                tableView.insertRows(at: [indexPath], with: .fade)
+            }
+        case .delete:
+            if let indexPath = indexPath {
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+        case .update:
+            if let indexPath = indexPath {
+                let cell = tableView.cellForRow(at: indexPath) as! ItemCell
+                configureCell(cell, indexPath: indexPath)
+            }
+        case .move:
+            if let indexPath = indexPath {
+                tableView.insertRows(at: [indexPath], with: .fade)
+            }
+        @unknown default:
+            break
+        }
+    }
+    
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.beginUpdates()
+    }
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.endUpdates()
     }
 }
 

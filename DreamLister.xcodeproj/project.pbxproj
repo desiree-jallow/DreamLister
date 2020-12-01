@@ -25,6 +25,8 @@
 		D759ADD3256DAA8800A861D7 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D759ADD2256DAA8800A861D7 /* MaterialView.swift */; };
 		D759ADD6256EDF4800A861D7 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D759ADD5256EDF4800A861D7 /* ItemCell.swift */; };
 		D759ADDA256EE29B00A861D7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D759ADD9256EE29B00A861D7 /* Constants.swift */; };
+		D791BEF625757C5600035E29 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D791BEF525757C5600035E29 /* CustomTextField.swift */; };
+		D791BEFA257587B300035E29 /* ItemDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D791BEF9257587B300035E29 /* ItemDetailsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		D759ADD2256DAA8800A861D7 /* MaterialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		D759ADD5256EDF4800A861D7 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		D759ADD9256EE29B00A861D7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D791BEF525757C5600035E29 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTextField.swift; path = DreamLister/View/CustomTextField.swift; sourceTree = SOURCE_ROOT; };
+		D791BEF9257587B300035E29 /* ItemDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				D759ADA7256D9BA000A861D7 /* MainVC.swift */,
+				D791BEF9257587B300035E29 /* ItemDetailsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -111,6 +116,7 @@
 			children = (
 				D759ADA9256D9BA000A861D7 /* Main.storyboard */,
 				D759ADD2256DAA8800A861D7 /* MaterialView.swift */,
+				D791BEF525757C5600035E29 /* CustomTextField.swift */,
 				D759ADD5256EDF4800A861D7 /* ItemCell.swift */,
 			);
 			path = View;
@@ -209,8 +215,10 @@
 				D759ADA8256D9BA000A861D7 /* MainVC.swift in Sources */,
 				D759ADC8256DA16A00A861D7 /* Image+CoreDataClass.swift in Sources */,
 				D759ADD3256DAA8800A861D7 /* MaterialView.swift in Sources */,
+				D791BEF625757C5600035E29 /* CustomTextField.swift in Sources */,
 				D759ADD6256EDF4800A861D7 /* ItemCell.swift in Sources */,
 				D759ADDA256EE29B00A861D7 /* Constants.swift in Sources */,
+				D791BEFA257587B300035E29 /* ItemDetailsVC.swift in Sources */,
 				D759ADC7256DA16A00A861D7 /* ItemType+CoreDataProperties.swift in Sources */,
 				D759ADCA256DA16A00A861D7 /* Store+CoreDataClass.swift in Sources */,
 				D759ADCC256DA16A00A861D7 /* Item+CoreDataClass.swift in Sources */,
